@@ -114,8 +114,8 @@ Markdown 标记区块引用是使用类似 email 中用 > 的引用方式，只�
 
 斜体：
 
-    *Coding，让开发更简单*
-    _Coding，让开发更简单_
+    *MarkDown，让开发更简单*
+    _MarkDown，让开发更简单_
 
 *效果图如下：*
 
@@ -123,8 +123,8 @@ Markdown 标记区块引用是使用类似 email 中用 > 的引用方式，只�
 
 加粗：
 
-    **Coding，让开发更简单**
-    __Coding，让开发更简单__
+    **MarkDown，让开发更简单**
+    __MarkDown，让开发更简单__
 
 *效果图如下：*
 
@@ -135,7 +135,7 @@ Markdown 标记区块引用是使用类似 email 中用 > 的引用方式，只�
 ### 自动链接
 方括号显示说明，圆括号内显示网址， Markdown 会自动把它转成链接，例如：
 
-    [超强大的云开发平台Coding](http://coding.net)
+    [0532-github](https://github.com/0532)
 
 *效果图如下：*
 
@@ -143,7 +143,7 @@ Markdown 标记区块引用是使用类似 email 中用 > 的引用方式，只�
 
 或者也可以直接用< >，将网址或者邮箱地址放在中间，也能将地址直接转成链接：
 
-    <support@coding.net>
+    <wanglichao@github.com>
 
 *效果图如下：*
 
