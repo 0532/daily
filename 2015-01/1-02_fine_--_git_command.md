@@ -104,13 +104,6 @@
 * git revert -n HEAD              # 撤销上一次但不commit
 
 ```
-**git合并（merge）**
-```
-* git merge <branch_name>             # 合并
-* git merge --no-ff <branch_name>     # 采用no fast forward的合并方式，这种方式在合并的同时会生成一个新的commit
-* git merge --abort                   # 尽量回退到merge前的状态（可能会失败）
-
-```
 **git重新基变（rebase）**
 ```
 * git rebase <branch_name>    #
@@ -121,12 +114,21 @@
 ```
 **git获取/拉（fetch/pull）**
 ```
+* git fetch origin master
 * git fetch               # 从远程获取最新版本到本地，不会自动merge
-
 * git pull                # 从远程获取最新版本并merge到本地
 * git pull --rebase       # 暂存本地变更，合并远程最新改动，合并刚刚暂存的本地变更（不产生无用的merge的同步）
 
 ```
+**git合并（merge）**
+```
+* git merge origin/master
+* git merge <branch_name>             # 合并
+* git merge --no-ff <branch_name>     # 采用no fast forward的合并方式，这种方式在合并的同时会生成一个新的commit
+* git merge --abort                   # 尽量回退到merge前的状态（可能会失败）
+
+```
+
 **git推（push）**
 ```
 * git push origin master      # 将本地分支推送到origin主机的master分支
