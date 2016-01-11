@@ -35,9 +35,8 @@
 ##### 1）sqoop v1.4.5_hadoop-2.0.4
 将数据库中的数据导出为hdfs
 
-    > 要先启动hadoop后，才可执行
-    >cd /usr/local/Cellar/sqoop/1.4.6/bin
-    >./sqoop import --connect jdbc:mysql://127.0.0.1:3306/hive --username       root --password anywhere --table test --fields-terminated-by : -m 1
+    > 要先启动hadoop后，才可执行 在后面执行
+    
     
 ##### 2）hadoop v2.7.1
 启动hadoop
@@ -112,6 +111,8 @@ hdfs的有关命令
   [1]: http://www.blogjava.net/redhatlinux/archive/2014/05/31/414291.html
 2）安装成功后，即可从MySql中拉取数据
 
+	>cd /usr/local/Cellar/sqoop/1.4.6/bin
+    >./sqoop import --connect jdbc:mysql://127.0.0.1:3306/hive --username       root --password anywhere --table test --fields-terminated-by : -m 1
 
 ### 2、2 hadoop v2.7.1
 1）[安装参考链接][2]
@@ -125,7 +126,7 @@ hdfs的有关命令
   [4]: http://autumnice.blog.163.com/blog/static/55520020131140120137/
 ####   注意不要使用derby数据源，换成mysql
 3）[我的hive-site.xml文件][5]
-  [5]: https://github.com/justQing00/tool/blob/master/settings/hive-site.xml
+  [5]: https://github.com/0532/daily/tree/master/2016-01/hive-site.xml
 4）启动metastore服务
 * 注意hive-site这个地方
 
@@ -151,18 +152,17 @@ hive创建数据库
 
 hive创建数据表
 
-    hive> CREATE TABLE IF NOT EXISTS pigmall_members (
-        > id string,
-        > user_mobile string,
-        > created_at string,
-        > updated_at string)
+    hive> CREATE TABLE IF NOT EXISTS hive_test (
+        > id int,
+        > name string)
         > row format delimited
-        > fields terminated by ':'
-        > lines terminated by '\n';
+        > ROW FORMAT DELIMITED FIELDS TERMINATED BY '|';
 
 从hdfs导入到hive
-
-    > load data inpath '/user/tanliqingcn/pigmall_members/part-m-00000' into table pigmall_members;
+	
+	> cd /usr/local/Cellar/hive/apache-hive-1.0.1-bin/bin
+	> hive
+    hive >load data inpath '/user/wanglichao/test/part-m-00000' into table hive_test;
 
 ### 2、4 spark v1.5.1
 1）[安装参考链接1][6]
@@ -185,7 +185,7 @@ hive创建数据表
     > import sqlContext._;
     //指定数据库
     > sqlContext.sql("use sqltest01");
-    > sqlContext.sql("SELECT * FROM pigmall_members").collect().foreach(println)
+    > sqlContext.sql("SELECT * FROM hive_test").collect().foreach(println)
 
 ### 2、5 cassandra v2.2.2
 1）brew install即可
