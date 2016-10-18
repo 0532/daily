@@ -8,11 +8,12 @@
    * [ 4-20 wind -- 日志输出](2015/4-20_wind--log-out.md)
    * [6-01 fine -- 资源管理](2015/6-01_fine--resources_mang.md)
    * [12-04-dubbo学习笔记](2015/12-04-dubbo.md)
-   * [test](2015/test.md)
 * [2016](2015/README.md)
    * [01-05-几个大数据应用整合](2016/data-setting.md)
    * [03-12-Java Guid](03-12-Java Guid.md)
    * [03-15-Node 笔记 IO](2016/03-15-node-io.md)
    * [05-15程序员的自我修养之CodeReview](2016/programmer-perpares-review.md)
-* Chapter
+   * [08-18-Google Java 代码规范](2016/08-18-google_java.md)
+* [2017](2017/README.md)
+   * [test](2017/test.md)
 
