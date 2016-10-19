@@ -61,9 +61,9 @@ return '\ufeff' + content; // byte order mark             | Good，对于非打�
 ####3.3.1 import不要使用通配符
 即，不要出现类似这样的import语句：```import java.util.*```;
 ####3.3.2 不要换行
-```import```语句不换行，列限制(4.4节)并不适用于import语句。(每个import语句独立成行)
+```import``` 语句不换行，列限制(4.4节)并不适用于import语句。(每个import语句独立成行)
 ####3.3.3 顺序和间距
-```import```语句可分为以下几组，按照这个顺序，每组由一个空行分隔：
+```import``` 语句可分为以下几组，按照这个顺序，每组由一个空行分隔：
 1.所有的静态导入独立成组
 
 2.```com.google imports```(仅当这个源文件是在```com.google```包下)
