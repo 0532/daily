@@ -14,3 +14,4 @@
    * [03-15-Node 笔记 IO](2016/03-15-node-io.md)
    * [05-15程序员的自我修养之CodeReview](2016/programmer-perpares-review.md)
    * [08-18-Google Java 代码规范](2016/08-18-google_java.md)
+   * [10-24-旧的blog备份](2016/0532.github.com-master.zip)
